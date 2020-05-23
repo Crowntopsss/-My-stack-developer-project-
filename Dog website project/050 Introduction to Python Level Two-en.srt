@@ -1,0 +1,47 @@
+1
+00:00:05,400 --> 00:00:10,870
+Welcome everyone to some level 2 section of the course in some level.
+
+2
+00:00:10,890 --> 00:00:15,350
+We're going to discuss some more advanced topics such as scope object oriented programming.
+
+3
+00:00:15,390 --> 00:00:18,150
+We'll have a quick project to test your O.P. skills.
+
+4
+00:00:18,360 --> 00:00:19,820
+Then we'll talk about decorator's.
+
+5
+00:00:19,890 --> 00:00:24,840
+We'll talk about this name equals mainlined that shows up in a lot of Pi scripts and then we'll talk
+
+6
+00:00:24,840 --> 00:00:26,980
+about how to create your own modules.
+
+7
+00:00:27,030 --> 00:00:32,130
+I'm going to assume that actually a lot of people are probably have some sort of experience with Python
+
+8
+00:00:32,190 --> 00:00:34,800
+and maybe just jump directly to Python level too.
+
+9
+00:00:34,870 --> 00:00:39,240
+I just want to make clear that if you're jumping straight into Python level two you should already have
+
+10
+00:00:39,240 --> 00:00:43,700
+an understanding of how functions and basic data types and data structures work with Python.
+
+11
+00:00:43,920 --> 00:00:48,770
+So if you don't feel comfortable functions quite yet maybe go back and review Python level one.
+
+12
+00:00:49,030 --> 00:00:53,430
+OK but that being said let's get started and start learning about these advanced topics.

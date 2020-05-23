@@ -1,0 +1,823 @@
+1
+00:00:05,750 --> 00:00:07,910
+Welcome back everyone in this lecture.
+
+2
+00:00:07,910 --> 00:00:14,010
+We're going to start off by talking about scope and also nested statements in general scope is the concept
+
+3
+00:00:14,010 --> 00:00:18,780
+that determines where you can actually see or access a variable and if you're jumping straight into
+
+4
+00:00:18,780 --> 00:00:23,850
+Python level too by now you probably actually already have an intuitive understanding of this idea of
+
+5
+00:00:23,850 --> 00:00:24,420
+scope.
+
+6
+00:00:24,600 --> 00:00:29,250
+But we're going to do is have a more formal discussion of this topic and show you some things that maybe
+
+7
+00:00:29,250 --> 00:00:30,540
+you haven't thought about yet.
+
+8
+00:00:30,600 --> 00:00:31,350
+So let's get started.
+
+9
+00:00:31,350 --> 00:00:35,280
+We're going to head over to the text editor and we're just going to do a couple of experiments to show
+
+10
+00:00:35,280 --> 00:00:37,410
+you this idea of scope more formally.
+
+11
+00:00:37,410 --> 00:00:40,280
+All right let's begin with a quick thought experiment.
+
+12
+00:00:40,410 --> 00:00:48,630
+I'm going to set a variable x equal to the string outside then I'll create a function further down called
+
+13
+00:00:48,630 --> 00:00:52,360
+report and report doesn't accept any arguments.
+
+14
+00:00:52,530 --> 00:01:01,050
+What it does is it sets X equal to inside and then it says return x.
+
+15
+00:01:01,070 --> 00:01:08,210
+So now the question is if I were to say prints X what would you expect to see.
+
+16
+00:01:08,310 --> 00:01:12,610
+Would you expect to see outside or inside.
+
+17
+00:01:13,110 --> 00:01:19,890
+Well this is where the idea of scope comes in basically scope comes into play when Python is asked to
+
+18
+00:01:19,890 --> 00:01:22,690
+the termine what type of variable you're referencing.
+
+19
+00:01:22,710 --> 00:01:27,560
+In this case Python wants to know what X you're referencing when you call 7 here.
+
+20
+00:01:27,570 --> 00:01:29,460
+So let's actually run this and see what happens.
+
+21
+00:01:30,750 --> 00:01:36,930
+Notice that it says outside which basically means that it's referring to the x over here x is equal
+
+22
+00:01:36,930 --> 00:01:41,420
+to outside instead of the re-assignment that's happening inside report.
+
+23
+00:01:41,430 --> 00:01:46,080
+Now you may already have some intuition at that because technically you're not actually calling report
+
+24
+00:01:46,080 --> 00:01:48,650
+to execute anywhere you've just define this function.
+
+25
+00:01:48,690 --> 00:01:50,230
+I haven't actually called it.
+
+26
+00:01:50,460 --> 00:01:55,210
+Now sometimes what's confusing for beginners is let's imagine I do call report.
+
+27
+00:01:55,410 --> 00:01:57,560
+So I have Report be executed.
+
+28
+00:01:57,600 --> 00:02:01,760
+In fact I say print's report.
+
+29
+00:02:01,920 --> 00:02:06,210
+So I'm going to print out report which should return x in this case it's inside.
+
+30
+00:02:06,360 --> 00:02:08,160
+And then going it prints X again.
+
+31
+00:02:08,160 --> 00:02:09,240
+Now what do you expect.
+
+32
+00:02:09,270 --> 00:02:13,780
+Do you expect to see inside outside or inside inside.
+
+33
+00:02:13,800 --> 00:02:17,430
+Well let's say this and find out.
+
+34
+00:02:17,440 --> 00:02:20,250
+So in this case we see inside and outside.
+
+35
+00:02:20,320 --> 00:02:25,380
+So the result of running a report does give you this re-assignment x is equal to inside.
+
+36
+00:02:25,480 --> 00:02:30,260
+But notice how it doesn't affect this global scope appear of exegetical to outside.
+
+37
+00:02:30,340 --> 00:02:36,020
+When you say print X without any reference to this function you'll still say outside.
+
+38
+00:02:36,280 --> 00:02:39,760
+So the whole reason this sort of thing is happening is because of scope.
+
+39
+00:02:39,850 --> 00:02:42,220
+So let's say discuss this idea of scope.
+
+40
+00:02:42,550 --> 00:02:43,520
+And in simple terms.
+
+41
+00:02:43,520 --> 00:02:47,160
+Basically the idea of scope can be described in three general rules.
+
+42
+00:02:47,260 --> 00:02:51,840
+One is that name assignments will create or change local names by default.
+
+43
+00:02:52,560 --> 00:02:57,180
+Two is that name references search at most for scopes.
+
+44
+00:02:57,180 --> 00:03:00,000
+So let's talk about these for scopes.
+
+45
+00:03:00,000 --> 00:03:03,300
+They're known as the LGB l e G-B rule.
+
+46
+00:03:05,040 --> 00:03:15,080
+And that stands for local inclosing global and built in.
+
+47
+00:03:15,810 --> 00:03:21,300
+So what's going to happen is Python is going to search in this order of scopes to try to figure out
+
+48
+00:03:21,390 --> 00:03:23,580
+what you're actually referencing.
+
+49
+00:03:23,580 --> 00:03:27,630
+So if it can't find something locally they'll start looking in the inclosing function.
+
+50
+00:03:27,630 --> 00:03:32,370
+If it can't find the reference and inclosing function will start looking globally at the module level.
+
+51
+00:03:32,370 --> 00:03:37,980
+Basically your entire Python script if it still can't find it then will start looking at builtin keywords
+
+52
+00:03:37,980 --> 00:03:42,100
+with Python such as the Eliane length function.
+
+53
+00:03:42,110 --> 00:03:45,460
+Now in order to actually build the understanding of each of these scopes.
+
+54
+00:03:45,530 --> 00:03:47,330
+Actually work through some examples of them.
+
+55
+00:03:47,360 --> 00:03:49,270
+I'm going to clear out this code right here.
+
+56
+00:03:50,110 --> 00:03:52,260
+And we'll come back to it later on.
+
+57
+00:03:52,360 --> 00:03:56,950
+For now let me show you an example of local and that's actually basically what we just did inside of
+
+58
+00:03:56,950 --> 00:03:58,090
+that function.
+
+59
+00:03:58,150 --> 00:04:02,740
+So I'm going to say report X equal to local.
+
+60
+00:04:02,740 --> 00:04:04,520
+So this is a local assignment
+
+61
+00:04:07,850 --> 00:04:14,150
+and then if I say print x x is going to be searched for first locally.
+
+62
+00:04:14,150 --> 00:04:16,190
+So right here at the local scope
+
+63
+00:04:19,020 --> 00:04:23,210
+melts take a look at this next scope which is called inclosing.
+
+64
+00:04:23,260 --> 00:04:26,090
+So this is an example of an inclosing function local.
+
+65
+00:04:26,110 --> 00:04:28,750
+So this first one this is a local assignment.
+
+66
+00:04:28,750 --> 00:04:30,720
+Now I want to check out inclosing.
+
+67
+00:04:30,910 --> 00:04:34,630
+So this is going to occur when you have a function inside of another function.
+
+68
+00:04:34,630 --> 00:04:36,610
+We have actually seen an example of this so far.
+
+69
+00:04:36,610 --> 00:04:38,230
+So let's try it out.
+
+70
+00:04:38,320 --> 00:04:41,960
+I'm going to say x is equal to a string.
+
+71
+00:04:41,980 --> 00:04:49,730
+This is global level and it's global level because it has no indentation and it's not within another
+
+72
+00:04:49,730 --> 00:04:54,630
+function and to show this I'm going to comets out our entire previous function.
+
+73
+00:04:54,650 --> 00:04:58,000
+So now this is the only life code inside of this python script.
+
+74
+00:04:58,160 --> 00:05:11,650
+So I'm saying X is a global level parameter or variable then I will say the F inclosing colon and I'll
+
+75
+00:05:11,650 --> 00:05:13,110
+say x is equal to.
+
+76
+00:05:13,270 --> 00:05:19,000
+And here I'm going to assign it inclosing level.
+
+77
+00:05:19,080 --> 00:05:24,000
+Then inside of my inclosing function ongoings create another function.
+
+78
+00:05:24,590 --> 00:05:27,920
+So notice here how this function is actually inside the enclosing function.
+
+79
+00:05:27,920 --> 00:05:38,850
+Take a look at my indentation carefully and then I'm going to print x and then I'm going to call inside.
+
+80
+00:05:38,850 --> 00:05:42,600
+So again take very careful attention of the actual indentation.
+
+81
+00:05:42,960 --> 00:05:47,390
+All of this code right here is within this inclosing function.
+
+82
+00:05:47,400 --> 00:05:50,750
+So what's happening here is I'm defining inclosing function.
+
+83
+00:05:50,880 --> 00:05:53,970
+I'm setting this variable x equal to the inclosing level.
+
+84
+00:05:54,300 --> 00:06:00,840
+Then I say this other function inside is going to print out X and then I'm actually going to call the
+
+85
+00:06:00,840 --> 00:06:02,490
+inside function to execute.
+
+86
+00:06:02,490 --> 00:06:10,800
+Which means when I call the inclosing function to x Q It says X defines inside and then executes inside.
+
+87
+00:06:10,800 --> 00:06:13,470
+So now here X I have this global level.
+
+88
+00:06:13,470 --> 00:06:17,280
+So now the question arises if that is further down in my script.
+
+89
+00:06:17,280 --> 00:06:18,780
+Let me get a little bit of space here.
+
+90
+00:06:21,470 --> 00:06:26,320
+Maybe you can actually see the indentation very clearly but if further down in my script script hour
+
+91
+00:06:26,360 --> 00:06:29,840
+to execute inclosing What do I expect to see.
+
+92
+00:06:29,940 --> 00:06:35,320
+Do I expect to see this is a global level or inclosing level.
+
+93
+00:06:35,630 --> 00:06:38,100
+Well let's think of the L EJB rule.
+
+94
+00:06:38,540 --> 00:06:42,680
+So in this case we're going to follow L E G B.
+
+95
+00:06:42,680 --> 00:06:48,410
+So we first look for something local roomer something local looks like this.
+
+96
+00:06:48,650 --> 00:06:53,740
+When the uncomment this so we can review this is a local assignment.
+
+97
+00:06:53,750 --> 00:06:55,240
+So X just looks locally.
+
+98
+00:06:55,250 --> 00:06:59,070
+See if find something at the same indentation level and there it is local.
+
+99
+00:06:59,120 --> 00:07:01,380
+So that's what Python wants to look for first.
+
+100
+00:07:02,400 --> 00:07:04,590
+So here we're saying Prince X and pythons.
+
+101
+00:07:04,610 --> 00:07:04,990
+OK.
+
+102
+00:07:05,010 --> 00:07:10,860
+Let me see if I can find something where x is defined locally and it looks for the entire inside function
+
+103
+00:07:11,130 --> 00:07:12,130
+and it can't find it.
+
+104
+00:07:12,240 --> 00:07:12,750
+It says.
+
+105
+00:07:12,750 --> 00:07:13,100
+All right.
+
+106
+00:07:13,110 --> 00:07:14,410
+So L is done.
+
+107
+00:07:14,550 --> 00:07:16,970
+Now it's time for me to search inclosing.
+
+108
+00:07:17,040 --> 00:07:19,570
+So the inclosing function is this entire function.
+
+109
+00:07:20,070 --> 00:07:23,790
+And then it can find right here x is equal to inclosing level.
+
+110
+00:07:23,790 --> 00:07:24,900
+So that's what it goes with.
+
+111
+00:07:24,900 --> 00:07:26,000
+It stops right there.
+
+112
+00:07:26,010 --> 00:07:30,240
+It no longer needs to jump up further and start looking for a global variable.
+
+113
+00:07:30,720 --> 00:07:34,770
+So if I were to save this and run it to make sure everything else commented out.
+
+114
+00:07:35,630 --> 00:07:40,850
+Let's run the script and there we see inclosing level as expected.
+
+115
+00:07:40,850 --> 00:07:42,590
+So this is no longer local.
+
+116
+00:07:42,590 --> 00:07:44,150
+Instead it's inclosing.
+
+117
+00:07:44,480 --> 00:07:45,100
+OK.
+
+118
+00:07:45,320 --> 00:07:47,660
+Now let's talk about the global level.
+
+119
+00:07:47,900 --> 00:07:52,400
+So I'm going to comment out this assignment here.
+
+120
+00:07:53,730 --> 00:07:55,440
+I'm going to save this again.
+
+121
+00:07:55,650 --> 00:08:00,310
+And remember the order that pi is going to look for it's going to say let me try to find something locally.
+
+122
+00:08:00,420 --> 00:08:02,320
+In this case it won't be able to find it.
+
+123
+00:08:02,340 --> 00:08:06,380
+Let me try to find something within the inclosing function actually commented out.
+
+124
+00:08:06,390 --> 00:08:07,740
+So I don't find it there.
+
+125
+00:08:07,740 --> 00:08:12,810
+So the next step is hey let me start looking for something at the global level basically with zero and
+
+126
+00:08:12,810 --> 00:08:13,480
+then Station.
+
+127
+00:08:13,560 --> 00:08:15,870
+And there we do see this global level variable.
+
+128
+00:08:16,080 --> 00:08:18,730
+So I'm going to save that run it.
+
+129
+00:08:18,860 --> 00:08:19,970
+And now I get back.
+
+130
+00:08:19,970 --> 00:08:27,380
+This is global level so we can clearly see here how Python is taking the steps of local inclosing global
+
+131
+00:08:27,440 --> 00:08:28,610
+and built in.
+
+132
+00:08:28,700 --> 00:08:31,660
+And in fact let's go ahead and show them all right now.
+
+133
+00:08:33,050 --> 00:08:35,900
+So let me make sure that's been answered correctly.
+
+134
+00:08:37,870 --> 00:08:46,090
+I'm going to say local here so let's run this again and whips I make sure my indentation is correct.
+
+135
+00:08:46,120 --> 00:08:47,490
+There we go run this again.
+
+136
+00:08:47,750 --> 00:08:53,670
+And now I see local so I can see there's a local level and if I were to comment that I'll save it and
+
+137
+00:08:53,670 --> 00:08:54,820
+run it again.
+
+138
+00:08:54,920 --> 00:09:00,620
+Then I see the inclosing level up here if I'm to comment that I'll save it and run it again.
+
+139
+00:09:00,720 --> 00:09:02,670
+Then I see the global level.
+
+140
+00:09:02,670 --> 00:09:06,180
+So hopefully this is a really clear picture of how Python is going.
+
+141
+00:09:06,180 --> 00:09:08,480
+Local inclosing and global.
+
+142
+00:09:08,670 --> 00:09:12,440
+Now let's say you can't find something in global.
+
+143
+00:09:12,500 --> 00:09:15,250
+It's going to then look for built in namespace.
+
+144
+00:09:15,380 --> 00:09:18,920
+And in this case these are the type of functions and keywords that you're actually already familiar
+
+145
+00:09:18,920 --> 00:09:27,140
+with things like length or some books or some or max those kinds of things.
+
+146
+00:09:27,140 --> 00:09:31,280
+So if it can't find it as a built in variable then it's just going to give you an error and say hey
+
+147
+00:09:31,340 --> 00:09:33,060
+X isn't defined.
+
+148
+00:09:33,140 --> 00:09:36,430
+So if we run this I'll say hey sorry name x is not the find.
+
+149
+00:09:36,440 --> 00:09:39,230
+Well maybe it won't be so apologetic but you get the idea.
+
+150
+00:09:40,300 --> 00:09:44,680
+The last thing I want to cover here is just local variables versus global variables.
+
+151
+00:09:44,740 --> 00:09:51,910
+We already understand scope in general how we go local inclosing global and builtin basically the order
+
+152
+00:09:51,910 --> 00:09:55,220
+that Python is going to search for variable definitions in.
+
+153
+00:09:55,570 --> 00:09:59,720
+But let's go back to the original example of the report.
+
+154
+00:10:00,070 --> 00:10:03,760
+So remember I'm going to delete everything here.
+
+155
+00:10:03,760 --> 00:10:16,820
+Remember we had something that said X outside and then we say for Port x is equal to inside and we return
+
+156
+00:10:16,970 --> 00:10:17,470
+X
+
+157
+00:10:20,860 --> 00:10:25,710
+and then I say go ahead and print out report for me.
+
+158
+00:10:26,230 --> 00:10:32,260
+When our toes run this notice I get back inside because right now we understand that it's going to look
+
+159
+00:10:32,350 --> 00:10:34,720
+locally for that scope first.
+
+160
+00:10:34,720 --> 00:10:41,200
+Now there may be times where you actually do want to change this particular value that is global.
+
+161
+00:10:41,200 --> 00:10:43,210
+So the question is Well how do I do that.
+
+162
+00:10:43,300 --> 00:10:48,580
+I actually reach out and tell Python Hey when I'm doing this x is equal to inside I actually want to
+
+163
+00:10:48,580 --> 00:10:51,820
+change this global variable as well in order to do that.
+
+164
+00:10:51,840 --> 00:10:53,870
+Use the global keyword.
+
+165
+00:10:53,890 --> 00:10:58,950
+Keep in mind you should be very careful with this and most Python users don't use the global keyword
+
+166
+00:10:58,960 --> 00:10:59,380
+often.
+
+167
+00:10:59,380 --> 00:11:03,270
+In fact it should be avoided because of how powerful it is.
+
+168
+00:11:03,340 --> 00:11:08,470
+Basically you could really easily reassign everything within a function within a script and kind of
+
+169
+00:11:08,470 --> 00:11:12,390
+screw yourself up so that's where you want to do this with great caution.
+
+170
+00:11:12,400 --> 00:11:14,710
+I will show you how it works.
+
+171
+00:11:14,710 --> 00:11:16,860
+So the way this works is the following manner.
+
+172
+00:11:17,940 --> 00:11:24,750
+I'm going to say x is equal to outside and then within my report I'm going to say Global X and this
+
+173
+00:11:24,750 --> 00:11:35,550
+basically tells Python Hey grab the global level x variable and then once it's done that then it's going
+
+174
+00:11:35,550 --> 00:11:39,510
+to reassign the global x.
+
+175
+00:11:39,540 --> 00:11:41,970
+So this is no longer just a local assignment.
+
+176
+00:11:41,970 --> 00:11:45,200
+It's actually telling Python Hey keyword global.
+
+177
+00:11:45,270 --> 00:11:50,310
+That means this X is going to reference this outside Global X and then when you say x is equal to the
+
+178
+00:11:50,310 --> 00:11:52,580
+inside you're going to return x.
+
+179
+00:11:52,620 --> 00:11:57,000
+So when we actually run this we won't see anything different occur.
+
+180
+00:11:57,030 --> 00:12:06,150
+We will still see inside what will be different is if we were to ask for Python to Prince X.
+
+181
+00:12:06,190 --> 00:12:10,000
+After calling that report function knows what happens.
+
+182
+00:12:10,000 --> 00:12:12,760
+Now I get inside inside.
+
+183
+00:12:12,850 --> 00:12:19,030
+If I were to remove that global call here so I'm still having x is equal to outside.
+
+184
+00:12:19,300 --> 00:12:21,720
+And now I'm just re-assigning locally.
+
+185
+00:12:22,210 --> 00:12:29,860
+When I save and run this that I see inside outside it's only when I call that global keyword that Python
+
+186
+00:12:29,890 --> 00:12:33,630
+basically now has permission to go into the global namespace.
+
+187
+00:12:33,670 --> 00:12:37,300
+Grab the x variable and do the re-assignment globally.
+
+188
+00:12:37,300 --> 00:12:44,150
+Until then you won't actually be able to affect the scope of this x variable and this function.
+
+189
+00:12:44,480 --> 00:12:47,340
+OK so that's the very basics of scopes.
+
+190
+00:12:47,350 --> 00:12:52,300
+Again the global keyword in general if you're starting to learn at this level of Python you should just
+
+191
+00:12:52,300 --> 00:12:54,070
+pretty much avoid it entirely.
+
+192
+00:12:54,070 --> 00:12:55,620
+Instead you should pass it in.
+
+193
+00:12:55,630 --> 00:12:57,630
+If you ever want to work with it.
+
+194
+00:12:57,780 --> 00:13:03,600
+So what I mean by that is if for some reason you do want to work with this outside a variable where
+
+195
+00:13:03,610 --> 00:13:10,330
+you can do is you can just pass it in report X and then say x is equal to inside return x.
+
+196
+00:13:10,540 --> 00:13:14,780
+And so you can say X here and then play around with it that way.
+
+197
+00:13:14,830 --> 00:13:18,060
+So here you'll notice we get inside and then we still get outside.
+
+198
+00:13:18,060 --> 00:13:24,550
+So this is a much safer way of doing any sort of reassignments while still having access to the initial
+
+199
+00:13:24,820 --> 00:13:25,680
+global.
+
+200
+00:13:25,690 --> 00:13:35,760
+So for example I could still say print x here and so I should see outside inside outside and there it
+
+201
+00:13:35,760 --> 00:13:38,410
+is outside inside outside.
+
+202
+00:13:38,790 --> 00:13:42,380
+OK if you have any questions feel free to post the Kewney forums.
+
+203
+00:13:42,420 --> 00:13:48,240
+Hopefully you start to really get a fundamental foundation to your already intuitive understanding of
+
+204
+00:13:48,240 --> 00:13:48,680
+scope.
+
+205
+00:13:48,810 --> 00:13:54,000
+Just from your lectures on functions in the next lecture we'll start talking about object oriented programming.
+
+206
+00:13:54,060 --> 00:13:54,770
+We'll see if.

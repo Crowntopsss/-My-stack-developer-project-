@@ -1,0 +1,727 @@
+1
+00:00:05,380 --> 00:00:08,710
+Welcome back everyone to this lecture on object oriented programming.
+
+2
+00:00:09,810 --> 00:00:15,420
+Object Oriented Programming or opii allows programmers to create their own objects that have methods
+
+3
+00:00:15,510 --> 00:00:16,710
+and attributes.
+
+4
+00:00:16,740 --> 00:00:22,860
+Recall that after the finding a string list dictionary or any other built in object with python we actually
+
+5
+00:00:22,860 --> 00:00:27,510
+have the ability it's called methods off of them using that method name syntax.
+
+6
+00:00:27,510 --> 00:00:33,880
+For example if you define the string you're able to call upper off that string to make uppercase Orphy
+
+7
+00:00:33,930 --> 00:00:41,390
+had a list you're able to call a pen to add something to that list these methods actis functions that
+
+8
+00:00:41,390 --> 00:00:47,770
+use information about the object as well as the object itself to return results or to just effects them
+
+9
+00:00:47,780 --> 00:00:49,930
+for a change on the current object.
+
+10
+00:00:50,000 --> 00:00:54,890
+For example like I just said that would include appending something to a list or counting the occurrences
+
+11
+00:00:54,890 --> 00:01:01,540
+of an element in a tuple O.P. allows users to create their own objects.
+
+12
+00:01:01,540 --> 00:01:06,070
+The general format is often pretty confusing when you first encounter it and its usefulness may not
+
+13
+00:01:06,070 --> 00:01:07,950
+be completely clear at first.
+
+14
+00:01:07,960 --> 00:01:13,480
+In general opii allows us to create code that is repeatable and organized and we really start diving
+
+15
+00:01:13,480 --> 00:01:14,230
+into a flask.
+
+16
+00:01:14,230 --> 00:01:18,920
+We're going to be using it quite a bit so it's important to have a solid foundation on it right now.
+
+17
+00:01:20,330 --> 00:01:24,260
+So again for much larger scripts of Python code such as the ones we're going to be creating the flask
+
+18
+00:01:24,590 --> 00:01:29,750
+functions by themselves aren't going to be enough for organization and repeatability commonly repeated
+
+19
+00:01:29,750 --> 00:01:34,620
+tasks and objects should be defined of O.P. to create code that is more usable.
+
+20
+00:01:34,820 --> 00:01:37,000
+So let's check out the syntax.
+
+21
+00:01:37,940 --> 00:01:41,770
+So here you have the basic syntax for object oriented programming.
+
+22
+00:01:41,780 --> 00:01:46,660
+Let's go over some of the keywords before hopping over to the text editor to explore some examples.
+
+23
+00:01:47,890 --> 00:01:52,750
+So we start off with the keyword class and then we decide on the name of the class and notice here.
+
+24
+00:01:52,780 --> 00:01:58,440
+Now I'm no longer following that snake casing of everything lowercase and underscores instead of classes
+
+25
+00:01:58,450 --> 00:02:00,320
+the convention is Camel casing.
+
+26
+00:02:00,340 --> 00:02:05,550
+Basically we have uppercase or capitalized letters and then every new word has a capitalized letter
+
+27
+00:02:05,560 --> 00:02:10,870
+so we say a name of class that way later on your code you can easily distinguish between a function
+
+28
+00:02:10,960 --> 00:02:12,120
+and a class.
+
+29
+00:02:12,130 --> 00:02:17,920
+So once we defined our class we have this init method and this is going to allow us to initialize the
+
+30
+00:02:17,920 --> 00:02:23,860
+actual class and notice here how it has a couple of keywords such as self and then Parama one and program
+
+31
+00:02:23,890 --> 00:02:31,610
+to basically what this means is when you create an instance of the class you have the ability to create
+
+32
+00:02:31,610 --> 00:02:34,100
+some attributes for the class themselves.
+
+33
+00:02:34,100 --> 00:02:41,130
+So the pram to that you actually pass into the class gets sinked to the instance of the class itself
+
+34
+00:02:41,360 --> 00:02:45,760
+and that actually uses that self keyword which is shown here.
+
+35
+00:02:45,770 --> 00:02:50,240
+So basically you're going to pass and Parama to and then that's going to be assigned to that instances
+
+36
+00:02:50,300 --> 00:02:56,040
+own attribute Parama to and this will make more sense as we actually code examples out in the text editor.
+
+37
+00:02:57,320 --> 00:03:00,830
+The other common thing to see inside of class is a method call.
+
+38
+00:03:00,890 --> 00:03:03,240
+And notice how this looks a lot like a function.
+
+39
+00:03:03,260 --> 00:03:05,300
+It just happens to be inside of a class.
+
+40
+00:03:05,300 --> 00:03:10,360
+And again it's using that sulpha keyword so using that self keyword.
+
+41
+00:03:10,360 --> 00:03:16,370
+This is basically going to tell the class to perform some sort of action with information about itself
+
+42
+00:03:17,420 --> 00:03:18,950
+and maybe some of its parameters.
+
+43
+00:03:18,950 --> 00:03:23,500
+So in this case it's just asking it to print out one of its attributes or parameters.
+
+44
+00:03:24,450 --> 00:03:28,710
+OK so we went over the basic syntax but it's not going to make a whole lot of sense until we actually
+
+45
+00:03:28,710 --> 00:03:30,630
+get our hands dirty and start coding it out.
+
+46
+00:03:30,720 --> 00:03:31,340
+So let's explore.
+
+47
+00:03:31,350 --> 00:03:34,970
+Object Oriented Programming with more detail with some code.
+
+48
+00:03:35,110 --> 00:03:39,280
+Laurie I want to begin this lesson by remembering about basic Python objects.
+
+49
+00:03:39,420 --> 00:03:46,650
+For instance I could have a list one two 3 and then I could say my list and append something to the
+
+50
+00:03:46,650 --> 00:03:47,420
+list.
+
+51
+00:03:47,440 --> 00:03:54,990
+Second call this method off of this list object and in fact pretty much everything in Python is an object
+
+52
+00:03:55,080 --> 00:03:58,560
+which you can test or check by using the type keyword.
+
+53
+00:03:58,800 --> 00:04:04,530
+So I can say Type of my list and then we can print out the result of this so that I can actually see
+
+54
+00:04:05,310 --> 00:04:07,290
+what type of object that is.
+
+55
+00:04:07,290 --> 00:04:15,750
+So when I run this I get back that its class list and then maybe I'll put in some number there.
+
+56
+00:04:15,960 --> 00:04:19,260
+So what type is 12 when I run this.
+
+57
+00:04:19,290 --> 00:04:25,030
+It says it's class I.A. or class Integer and pretty much all your different objects are going to have
+
+58
+00:04:25,030 --> 00:04:26,810
+some sort of type associated with them.
+
+59
+00:04:26,860 --> 00:04:28,950
+So let's do twenty three point five.
+
+60
+00:04:29,230 --> 00:04:30,160
+Save that.
+
+61
+00:04:30,460 --> 00:04:30,890
+Run it.
+
+62
+00:04:30,940 --> 00:04:32,660
+And this is class float.
+
+63
+00:04:32,740 --> 00:04:38,140
+The main idea here is we're not going to be able to create our own class so Ill say class and then whatever
+
+64
+00:04:38,140 --> 00:04:42,620
+class we created and then our classes are going to have their own methods that we can define.
+
+65
+00:04:43,000 --> 00:04:44,820
+So let's try this out.
+
+66
+00:04:45,220 --> 00:04:51,260
+We'll start off by using the class keyword and then you choose a class name that's capitalized.
+
+67
+00:04:51,260 --> 00:04:58,460
+In our case we'll just call this sample and then you can either have a colon or open and close parentheses.
+
+68
+00:04:58,460 --> 00:05:00,870
+Either will work fine open in the open and close.
+
+69
+00:05:00,870 --> 00:05:06,290
+Prince is right now because later on we're going to need them to inherit from other classes.
+
+70
+00:05:06,500 --> 00:05:10,060
+So we'll say class sample colon and then pass.
+
+71
+00:05:10,070 --> 00:05:11,810
+Basically this class is totally empty.
+
+72
+00:05:11,810 --> 00:05:15,830
+It doesn't do anything then I create an instance of the class.
+
+73
+00:05:15,830 --> 00:05:20,310
+This is really similar to when we're doing something like creating an instance of a set object.
+
+74
+00:05:20,530 --> 00:05:24,060
+So I'll say x is equal to sample.
+
+75
+00:05:24,350 --> 00:05:26,250
+Open and close princes.
+
+76
+00:05:26,320 --> 00:05:29,030
+Let's go ahead and check out the type of this object.
+
+77
+00:05:29,030 --> 00:05:31,240
+So I'll say what is a type of x.
+
+78
+00:05:32,130 --> 00:05:36,330
+And when I run this it says hey class main sample.
+
+79
+00:05:36,630 --> 00:05:41,400
+And at the end of the section the course will talk about this main variable more that you can get the
+
+80
+00:05:41,400 --> 00:05:45,570
+idea here that we've already been able to create our own ogic type in this case.
+
+81
+00:05:45,570 --> 00:05:48,960
+It's a really simple object called a sample object.
+
+82
+00:05:48,960 --> 00:05:54,570
+OK let's expand on this idea by starting to understand attributes for objects in order to do that.
+
+83
+00:05:54,600 --> 00:06:02,240
+I'm going to create an entirely new class we're going to create a class or a dog object.
+
+84
+00:06:02,240 --> 00:06:08,950
+So say class dog and then I'm going to use a special method and these special methods are often called
+
+85
+00:06:09,080 --> 00:06:13,120
+Dunder methods because they have a double set of underscores surrounding them.
+
+86
+00:06:13,330 --> 00:06:21,730
+So I will say underscore underscore I and I-T underscore underscore and then I'm going to passen the
+
+87
+00:06:21,730 --> 00:06:27,390
+self parameter and then I'm going to pass on another argument for Breede.
+
+88
+00:06:27,580 --> 00:06:29,500
+So I have a breed of dog.
+
+89
+00:06:29,560 --> 00:06:38,600
+They'll say colon and we'll say self-taught breed is equal to breed.
+
+90
+00:06:38,670 --> 00:06:40,900
+So let's break down what's actually happening here.
+
+91
+00:06:41,040 --> 00:06:47,370
+We have this in method and this is automatically called right after you create an instance of this object.
+
+92
+00:06:47,580 --> 00:06:53,870
+And then each attribute in the class definition begins for reference to the actual instance object.
+
+93
+00:06:53,880 --> 00:06:59,040
+So by convention that's what this self keyword is basically saying we're saying that this particular
+
+94
+00:06:59,040 --> 00:07:06,210
+instance of the object such as when we say something like x is equal to dog and this case will have
+
+95
+00:07:06,210 --> 00:07:14,660
+to provide a breed such as lab or saying OK X that instance of the dog that breed is going to be whatever
+
+96
+00:07:14,660 --> 00:07:15,980
+breed was passed then.
+
+97
+00:07:15,980 --> 00:07:17,900
+In this case it's a lab.
+
+98
+00:07:17,900 --> 00:07:19,570
+So let's actually see what happens here.
+
+99
+00:07:20,850 --> 00:07:30,520
+In fact let's go ahead and then print out the type of x so will run this and we get back.
+
+100
+00:07:30,550 --> 00:07:32,470
+We have a main dog type.
+
+101
+00:07:32,630 --> 00:07:40,690
+What's interesting is now off of my doctype I'm going to be able to call breed off of it as an attribute.
+
+102
+00:07:40,730 --> 00:07:46,220
+So when I read this it says that the type is a string which makes sense but if I just ask for Breit
+
+103
+00:07:46,220 --> 00:07:54,200
+itself because lab was a string that's going to report back o the breed of the x variable instance of
+
+104
+00:07:54,200 --> 00:07:58,190
+dog is lab because that's what you find here as the breed.
+
+105
+00:07:58,460 --> 00:08:04,040
+So all you're doing here is when you call a dog an instance of dog you automatically call this initialization
+
+106
+00:08:04,040 --> 00:08:07,610
+method and then you in whatever arguments or parameters.
+
+107
+00:08:07,640 --> 00:08:12,650
+Essentially whatever attributes you want for the object and the system to self.
+
+108
+00:08:12,800 --> 00:08:14,800
+And in this case it ends up being X..
+
+109
+00:08:14,870 --> 00:08:18,130
+So X here self that's the connection.
+
+110
+00:08:18,140 --> 00:08:23,150
+Now we say dots the attribute name is equal to whatever attribute was passed then.
+
+111
+00:08:23,180 --> 00:08:24,640
+In this case it's lab.
+
+112
+00:08:24,860 --> 00:08:29,250
+So this is basically saying Breede is equal to lab.
+
+113
+00:08:29,330 --> 00:08:31,170
+So they're in this again Negat lab.
+
+114
+00:08:31,370 --> 00:08:37,200
+Often what is confusing for beginners is the fact that we're using Breede here three times breed breed
+
+115
+00:08:37,400 --> 00:08:40,340
+and self-taught breed just to make it really clear.
+
+116
+00:08:40,560 --> 00:08:43,330
+I want to show you that you could also say this.
+
+117
+00:08:43,790 --> 00:08:45,140
+I could say input breed
+
+118
+00:08:47,990 --> 00:08:55,970
+input breed and then say this and put Breede is let's go ahead and make it like a husky or something.
+
+119
+00:08:58,240 --> 00:09:03,310
+So what this is saying is when you create an instance of the doll class as I'm doing here a line 6 you're
+
+120
+00:09:03,310 --> 00:09:06,150
+going to automatically call this init method.
+
+121
+00:09:06,370 --> 00:09:10,350
+And then there you're going to use the self keyword to assign attributes.
+
+122
+00:09:10,360 --> 00:09:15,370
+So you're going to say then self essentially becomes X here so X that breed is going to be whatever
+
+123
+00:09:15,370 --> 00:09:17,220
+you passed in as the input breed.
+
+124
+00:09:17,290 --> 00:09:22,620
+So you take the input breed and you assign it to self-taught breed which ends up being Huskey.
+
+125
+00:09:22,630 --> 00:09:27,650
+So when you say Prince X-type breed and you run this you get Huskey.
+
+126
+00:09:27,850 --> 00:09:29,010
+So notice how this works.
+
+127
+00:09:29,020 --> 00:09:33,670
+Again you just passing in an input argument for an attribute and then you assign the input argument
+
+128
+00:09:34,060 --> 00:09:35,620
+to the attribute name.
+
+129
+00:09:35,620 --> 00:09:40,510
+Now by convention you usually have both the argument and the attribute share the same name which is
+
+130
+00:09:40,510 --> 00:09:44,520
+then why you see something like breed breed and then breed.
+
+131
+00:09:44,590 --> 00:09:48,630
+But I wanted to show you that aspect so you don't get confused by saying breed there three times.
+
+132
+00:09:48,730 --> 00:09:53,440
+So pretty much all the attribute names are going to see them three times one for the argument one for
+
+133
+00:09:53,440 --> 00:09:57,520
+the assignment and then one for the actual dot attribute call.
+
+134
+00:09:57,530 --> 00:10:00,440
+OK so let's try adding in another attribute.
+
+135
+00:10:00,500 --> 00:10:07,490
+So dog should have names so I'll say breed and name and then we'll say that this instance of the dog
+
+136
+00:10:07,520 --> 00:10:14,480
+self-taught its name is going to be the name that's passed in so we'll save that and then let's provide.
+
+137
+00:10:14,480 --> 00:10:16,760
+Now we have to change this back to breed.
+
+138
+00:10:17,120 --> 00:10:22,010
+And in fact we totally don't need to actually say breed is equal to and said it could just say just
+
+139
+00:10:22,010 --> 00:10:27,250
+pass and husky and then the name of this dog will have it be Sammy.
+
+140
+00:10:27,260 --> 00:10:33,890
+Now let's have this variable now be called Sam so I can then ask for attributes of Sam I can say what
+
+141
+00:10:33,890 --> 00:10:42,820
+is Sam that breed or Prince what is Sam dog name and that is here.
+
+142
+00:10:42,830 --> 00:10:46,380
+Because these are attributes I don't have open and close princes.
+
+143
+00:10:46,490 --> 00:10:48,420
+Those will be methods that we'll talk about later on
+
+144
+00:10:51,350 --> 00:10:56,760
+looks for up to have the princes there run this and now I see Huskey and Samie.
+
+145
+00:10:56,980 --> 00:11:03,130
+So I have this instance of a dog whose breed is husky and Sammy is going to be that dog's name.
+
+146
+00:11:03,430 --> 00:11:05,680
+So those are the basics for attributes.
+
+147
+00:11:05,680 --> 00:11:09,290
+Now there are also what are known as class object attributes.
+
+148
+00:11:09,460 --> 00:11:14,210
+So we can say class object attributes.
+
+149
+00:11:14,480 --> 00:11:18,530
+And these are attributes that are defined outside any methods of the class.
+
+150
+00:11:18,530 --> 00:11:21,180
+So it's going to be outside these methods.
+
+151
+00:11:21,230 --> 00:11:26,210
+And by convention they're the very first thing that comes in before in it the purpose of class object
+
+152
+00:11:26,240 --> 00:11:31,490
+attributes are for things that are going to be true regardless of the instance of the dog.
+
+153
+00:11:31,490 --> 00:11:38,440
+So for example we could say that the species of the dog is mammal.
+
+154
+00:11:38,440 --> 00:11:40,440
+Now technically biologically it's not true.
+
+155
+00:11:40,450 --> 00:11:44,440
+It's actually a different term it's called class for a mammal but I don't want to get confused with
+
+156
+00:11:44,500 --> 00:11:45,280
+this keyword.
+
+157
+00:11:45,460 --> 00:11:46,830
+So just say species.
+
+158
+00:11:46,840 --> 00:11:50,080
+So if you have some familiar biology that's forgive me.
+
+159
+00:11:50,470 --> 00:11:55,390
+But anyways we're going to say that all dogs regardless of their breed and regardless of their name
+
+160
+00:11:55,660 --> 00:11:57,200
+they're always going to be mammals.
+
+161
+00:11:57,250 --> 00:12:03,610
+So that's why I'm sending this attribute as a class object attribute and because it's a class object
+
+162
+00:12:03,640 --> 00:12:06,260
+attribute and it's outside as in method.
+
+163
+00:12:06,310 --> 00:12:10,750
+I actually don't need to use the self-taught keyword to zoom out just a little bit so we can see the
+
+164
+00:12:10,750 --> 00:12:11,620
+whole picture here.
+
+165
+00:12:13,390 --> 00:12:17,180
+So again I have this class dog I had this class object attribute.
+
+166
+00:12:17,410 --> 00:12:21,850
+And when I defined the instance the dog had to provide a breed and the name.
+
+167
+00:12:22,050 --> 00:12:26,160
+So if I were to say this and run it I won't see anything different.
+
+168
+00:12:26,470 --> 00:12:34,510
+But now all I have access to that class object attribute which in this case we said whoops not animal
+
+169
+00:12:35,140 --> 00:12:37,430
+is species.
+
+170
+00:12:37,450 --> 00:12:39,170
+There we go.
+
+171
+00:12:39,240 --> 00:12:48,710
+And then I'll report back mammal because it doesn't matter if I have a lab whose name is Franki as long
+
+172
+00:12:48,710 --> 00:12:51,680
+as it's a dog species is always going to be a mammal.
+
+173
+00:12:51,740 --> 00:12:56,300
+So any dog regardless of their breed or name will always have the same species attribute.
+
+174
+00:12:56,300 --> 00:13:00,890
+So that's the purpose of a class object attribute it's an attribute you want to have permanently set
+
+175
+00:13:01,280 --> 00:13:04,630
+beyond whatever the user of this class can provide.
+
+176
+00:13:05,000 --> 00:13:09,750
+OK so that's going to be something that's always true regardless of the instance of the dog.
+
+177
+00:13:10,040 --> 00:13:16,310
+So so far we've discussed the basics of the class syntax and the basics of attribute calls including
+
+178
+00:13:16,320 --> 00:13:22,880
+this method in order to assign attributes to a new instance of the dog object as well as class object
+
+179
+00:13:22,910 --> 00:13:28,100
+attributes which is going to be the same attribute regardless of whatever specific attributes were declared
+
+180
+00:13:28,130 --> 00:13:29,590
+in the init method.
+
+181
+00:13:29,630 --> 00:13:35,330
+Coming up next in part two we'll begin to discuss other methods you can add in to a class.
+
+182
+00:13:35,330 --> 00:13:35,960
+We'll see if they're.

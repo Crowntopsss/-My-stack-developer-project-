@@ -1,0 +1,759 @@
+1
+00:00:05,380 --> 00:00:08,520
+Welcome back to part two of our discussion of object oriented programming.
+
+2
+00:00:08,620 --> 00:00:11,080
+Well we're going to talk about methods and inheritance.
+
+3
+00:00:11,080 --> 00:00:13,820
+Let's head back to text editor where we left off last time.
+
+4
+00:00:14,020 --> 00:00:18,310
+Last time we left off at creating this dog class that only had attributes.
+
+5
+00:00:18,310 --> 00:00:22,990
+And we also discussed class object attributes which are attributes which are going to be true for any
+
+6
+00:00:22,990 --> 00:00:24,950
+instance of the stock object.
+
+7
+00:00:24,970 --> 00:00:29,410
+So it doesn't matter what kind of breed or name the stock can have or it also doesn't matter if we create
+
+8
+00:00:29,410 --> 00:00:30,390
+a brand new dog.
+
+9
+00:00:30,520 --> 00:00:35,050
+So I can create a variable called new dog which is also an instance of the dog class.
+
+10
+00:00:35,080 --> 00:00:41,900
+This one may be a golden retriever so say Golden is the breed and the name will just have this dog.
+
+11
+00:00:41,920 --> 00:00:52,550
+Cindy and if I say Prince new dog species save I'll get back mammal as well.
+
+12
+00:00:52,590 --> 00:00:53,730
+So I get mammal mammal.
+
+13
+00:00:53,770 --> 00:00:58,350
+Doesn't matter what the breed instance or name of the dog is this class object attribute is going to
+
+14
+00:00:58,350 --> 00:00:59,860
+be the same for all of them.
+
+15
+00:00:59,910 --> 00:01:05,760
+So let's now talk about methods which are basically going to be actions you perform on the object.
+
+16
+00:01:06,090 --> 00:01:10,290
+So I'm going to delete all this code and let's start with something new.
+
+17
+00:01:10,290 --> 00:01:15,620
+We're going to create a circle class and we'll say DMF.
+
+18
+00:01:15,630 --> 00:01:17,150
+Let me zoom in here just a little bit.
+
+19
+00:01:18,800 --> 00:01:21,700
+We'll say T.F. and we create our own method.
+
+20
+00:01:21,710 --> 00:01:28,780
+Remember this is double underscores so underscore underscore and we'll say self and in this case we're
+
+21
+00:01:28,780 --> 00:01:34,100
+going to define an attribute as radius and we can also give a default value just like we could for a
+
+22
+00:01:34,100 --> 00:01:35,000
+normal function.
+
+23
+00:01:35,000 --> 00:01:41,540
+I'll say radious by default is equal to 1 in case the user doesn't provide it then we'll say sulf thought
+
+24
+00:01:41,540 --> 00:01:45,790
+radius is equal to radius OK.
+
+25
+00:01:46,070 --> 00:01:47,390
+So we have class circle.
+
+26
+00:01:47,400 --> 00:01:52,850
+And in this method when you create a new instance of the circle class you can provide a radius for it.
+
+27
+00:01:52,850 --> 00:01:57,650
+If you don't provide a radius then the default will just be radius equal to 1.
+
+28
+00:01:57,710 --> 00:02:03,810
+So let's create an instance of it will say My circle is equal to in its circle.
+
+29
+00:02:04,360 --> 00:02:08,350
+And then I'll print how my circles radius.
+
+30
+00:02:08,900 --> 00:02:10,410
+Let's run this.
+
+31
+00:02:10,550 --> 00:02:16,800
+And now I get back 1 as a radius that circle however I could provide in my own radius such as 10.
+
+32
+00:02:17,030 --> 00:02:18,080
+And when I run this again.
+
+33
+00:02:18,300 --> 00:02:23,030
+Now I get back 10 so I have this default radius which you can always overwrite when I'm creating a new
+
+34
+00:02:23,030 --> 00:02:25,090
+instance of my circle.
+
+35
+00:02:25,100 --> 00:02:29,210
+Now think of a class object attribute which is going to be true for any circle.
+
+36
+00:02:29,690 --> 00:02:31,190
+One of these could be pi.
+
+37
+00:02:31,580 --> 00:02:37,460
+So the value of pi or that ratio 3.1 for that's going to be pretty much true for any circle regardless
+
+38
+00:02:37,460 --> 00:02:38,310
+of the radius.
+
+39
+00:02:38,330 --> 00:02:44,460
+So it could set that as a class object attribute though the second house under that init method.
+
+40
+00:02:45,970 --> 00:02:49,310
+So far we've only discussed attributes now discuss methods.
+
+41
+00:02:49,450 --> 00:02:53,170
+So this init method is technically what's known as a special method.
+
+42
+00:02:53,170 --> 00:02:55,550
+Again it has that double set of underscores to show you that.
+
+43
+00:02:55,710 --> 00:03:01,660
+But you can create your own methods that performs some sort of action with or on the object.
+
+44
+00:03:01,720 --> 00:03:09,410
+So let's create a method for calculating area and by default every method should start first with self.
+
+45
+00:03:09,480 --> 00:03:14,970
+Basically that tells Python that you're referring to the instance of the object you create when applying
+
+46
+00:03:15,030 --> 00:03:16,760
+this particular method.
+
+47
+00:03:16,920 --> 00:03:23,520
+So area is just going to return the area of the circle which in this case is pi r squared.
+
+48
+00:03:23,520 --> 00:03:32,310
+So we're going to say self-taught radius times self-taught radius times self-taught pi.
+
+49
+00:03:32,950 --> 00:03:41,450
+So it saved that and I will say my circle radius and then we'll print out my circle area.
+
+50
+00:03:41,660 --> 00:03:43,090
+But notice what happens.
+
+51
+00:03:43,130 --> 00:03:49,190
+Area itself is a method which means if I just called that area it's actually not going to execute the
+
+52
+00:03:49,190 --> 00:03:50,270
+method.
+
+53
+00:03:50,420 --> 00:03:51,670
+Self-taught radius.
+
+54
+00:03:51,680 --> 00:03:52,790
+That's an attribute.
+
+55
+00:03:52,970 --> 00:03:56,370
+But this DPF area is going to be a method that you can tell.
+
+56
+00:03:56,390 --> 00:04:00,410
+It's a method because it has DPF in front of it very much like a function would.
+
+57
+00:04:00,770 --> 00:04:02,740
+So let's say this and run it and see what happens.
+
+58
+00:04:04,000 --> 00:04:06,340
+Right now I get 10 for the radius.
+
+59
+00:04:06,340 --> 00:04:12,580
+But when I call my circle the area I get this bound Methot Circle area of main circle object at this
+
+60
+00:04:12,580 --> 00:04:18,250
+location memory and very similar to what we are working on functions in order to execute a method.
+
+61
+00:04:18,250 --> 00:04:23,240
+You have to have the open and close princes and then you can see the syntax highlighting has even changed.
+
+62
+00:04:23,290 --> 00:04:30,820
+Now when I run this I'm able to see the actual area of the circle three fourteen point zero so are squared
+
+63
+00:04:30,970 --> 00:04:32,350
+times pi.
+
+64
+00:04:32,470 --> 00:04:33,130
+OK.
+
+65
+00:04:33,160 --> 00:04:39,460
+So again the method is going to perform an action and it can return or it can actually affect the object
+
+66
+00:04:39,460 --> 00:04:41,680
+itself without returning anything.
+
+67
+00:04:41,680 --> 00:04:44,290
+Just keep that in mind for future reference.
+
+68
+00:04:45,270 --> 00:04:52,880
+Let's try adding a new method which calculates the circumference of a circle will say the F will say
+
+69
+00:04:53,370 --> 00:04:54,940
+circumference.
+
+70
+00:04:55,320 --> 00:05:03,840
+We pass and self and then we'll say return and circumference of a circle is 2 times pi.
+
+71
+00:05:03,850 --> 00:05:09,640
+So we'll say self-taught pi times the radius which in this case is self-taught radius.
+
+72
+00:05:09,640 --> 00:05:14,390
+Notice here how I'm saying self-taught radius instead of just radius.
+
+73
+00:05:14,410 --> 00:05:18,840
+If I say just radius Pi does not understand what I'm referring to.
+
+74
+00:05:18,910 --> 00:05:19,720
+I need to tell it.
+
+75
+00:05:19,720 --> 00:05:24,660
+Hey I'm talking about self-taught radius the radius of the circle that it was assigned upon create in
+
+76
+00:05:24,660 --> 00:05:25,760
+the circle.
+
+77
+00:05:26,280 --> 00:05:28,400
+So a self-taught radius there.
+
+78
+00:05:28,720 --> 00:05:32,190
+Let's run this and whoops we actually forgot to execute it.
+
+79
+00:05:32,200 --> 00:05:38,620
+So let's come back here and say my circle circumference again remember those open close Princie so we
+
+80
+00:05:38,620 --> 00:05:40,680
+can actually run this method.
+
+81
+00:05:40,720 --> 00:05:46,300
+I run this and I see the circumference of the circle with some extra precision due to using floating
+
+82
+00:05:46,300 --> 00:05:48,770
+point numbers appear OK.
+
+83
+00:05:49,050 --> 00:05:53,470
+So we were able to create our own methods for area and circumference.
+
+84
+00:05:53,490 --> 00:05:56,130
+The next thing I want to talk about is inheritance.
+
+85
+00:05:56,460 --> 00:05:58,800
+So I'm going to clear these examples.
+
+86
+00:06:01,200 --> 00:06:09,800
+And let's create a class called animal it's going to be a very simple class it's going to have an in
+
+87
+00:06:09,810 --> 00:06:10,470
+it method.
+
+88
+00:06:12,020 --> 00:06:14,700
+With self it's not going to take any other parameters.
+
+89
+00:06:14,960 --> 00:06:17,440
+And in this case we're not even going to assign any attributes.
+
+90
+00:06:17,440 --> 00:06:28,690
+We're just going to say animal created then we're going to say T.F. report self and this will be a method
+
+91
+00:06:29,380 --> 00:06:44,200
+that just prints out animal then we're going to create one more method self that prints out eating.
+
+92
+00:06:44,240 --> 00:06:46,220
+OK so let's play around with this.
+
+93
+00:06:46,220 --> 00:06:49,780
+I'm going to create an instance of my animal object.
+
+94
+00:06:49,820 --> 00:06:58,040
+So say a is equal to an animal object and then we'll say a dot and let's have it eats and let's have
+
+95
+00:06:58,040 --> 00:07:00,320
+it report.
+
+96
+00:07:00,320 --> 00:07:05,630
+Notice tone after call print on eata report because those methods themselves already print out for me
+
+97
+00:07:06,770 --> 00:07:11,930
+and I'm going to zoom out a little bit so we can see the whole class on the screen.
+
+98
+00:07:11,930 --> 00:07:13,190
+So let's run this.
+
+99
+00:07:13,430 --> 00:07:14,820
+And notice I get back.
+
+100
+00:07:15,020 --> 00:07:17,060
+Eating an animal.
+
+101
+00:07:17,360 --> 00:07:17,850
+OK.
+
+102
+00:07:18,050 --> 00:07:20,450
+So pretty basic class right here.
+
+103
+00:07:20,550 --> 00:07:25,040
+Again it's just going to print's animal created upon creating an animal or animal created that happens
+
+104
+00:07:25,040 --> 00:07:25,930
+on line 12.
+
+105
+00:07:26,030 --> 00:07:29,190
+Then it says eating and that it's an animal.
+
+106
+00:07:29,200 --> 00:07:38,370
+Now maybe you want to create a new class such as a dog class and you start thinking to yourself Hey
+
+107
+00:07:38,370 --> 00:07:42,220
+I already did all this work with the Animal class maybe I could reduce some of this.
+
+108
+00:07:42,240 --> 00:07:47,550
+For example I would like dogs to have an eat method and have them say that they're eating.
+
+109
+00:07:47,610 --> 00:07:53,100
+So how can actually take advantage of all the prior work that I've done on the Animal class with my
+
+110
+00:07:53,250 --> 00:07:59,540
+dog class which you can do is you can inherit the Animal class and the way you do this is you just pass
+
+111
+00:07:59,540 --> 00:08:07,110
+an animal no princes as far as the end of the animal into the dog class and then inside of that class
+
+112
+00:08:07,620 --> 00:08:22,920
+you're going to say in its self and then here you can say Prince dog created save that and now down
+
+113
+00:08:22,920 --> 00:08:28,070
+here what I'm going to do is I'm going to create an instance of the class so I'll say D.
+
+114
+00:08:28,350 --> 00:08:33,190
+Is equal to dog.
+
+115
+00:08:33,330 --> 00:08:39,570
+But then what I'm going to do is inside this method for dog I'm going to initialize the animal method
+
+116
+00:08:39,600 --> 00:08:49,750
+I inherited Saussy animal dot underscore underscore that underscore underscore and then passen self
+
+117
+00:08:50,660 --> 00:08:57,080
+so what this says is upon creating an instance of dog I'm going to using my inheritance from animal
+
+118
+00:08:57,440 --> 00:09:01,410
+create an instance of the Animal class and then print that created.
+
+119
+00:09:01,460 --> 00:09:06,840
+So when I create dog here I should see animal created because I'm calling in it down here an animal.
+
+120
+00:09:06,890 --> 00:09:08,700
+And then I should see dog created.
+
+121
+00:09:08,720 --> 00:09:10,100
+Let's see if that happens.
+
+122
+00:09:11,790 --> 00:09:15,810
+So I scroll up and there we have it animal created and dog created.
+
+123
+00:09:15,810 --> 00:09:21,820
+Now the question arises there are these other useful methods on animal report and eat.
+
+124
+00:09:22,200 --> 00:09:25,620
+Let's see if now I have access to them from the dog class.
+
+125
+00:09:25,910 --> 00:09:27,510
+So I'm going to say D.
+
+126
+00:09:27,570 --> 00:09:29,100
+Eat notice here.
+
+127
+00:09:29,160 --> 00:09:32,510
+I never defined eat inside of my thought class.
+
+128
+00:09:32,580 --> 00:09:36,250
+It's only the inside of the Animal class.
+
+129
+00:09:36,350 --> 00:09:42,710
+I'm going to run this and I get back eating even though I never strictly defined it inside of the dog
+
+130
+00:09:42,710 --> 00:09:43,270
+class.
+
+131
+00:09:43,290 --> 00:09:51,060
+I was able to inherit that method of eat from the Animal class and this is what inheritance all about
+
+132
+00:09:51,240 --> 00:09:58,200
+being able to use methods or attributes that you already defined in another class with a new class.
+
+133
+00:09:58,200 --> 00:10:01,640
+So now I have access to eat and I should also have access to report.
+
+134
+00:10:01,980 --> 00:10:10,990
+So Saidy report run this and now I get to see dog created eating an animal.
+
+135
+00:10:11,230 --> 00:10:13,100
+However let's think about this.
+
+136
+00:10:13,120 --> 00:10:16,060
+Maybe I want to be more specific in my report than just animal.
+
+137
+00:10:16,090 --> 00:10:18,340
+Maybe they would like it to report dog.
+
+138
+00:10:18,610 --> 00:10:20,080
+Well that's no problem.
+
+139
+00:10:20,080 --> 00:10:22,730
+We can easily overwrite inherited methods.
+
+140
+00:10:22,870 --> 00:10:29,810
+All I need to say is the earth choose the same method name report say self.
+
+141
+00:10:29,810 --> 00:10:31,540
+And then it's going to print.
+
+142
+00:10:32,120 --> 00:10:41,180
+I am a dog so now when you call report even though you're inheriting from animal and animal typically
+
+143
+00:10:41,180 --> 00:10:43,350
+prints animal for its report.
+
+144
+00:10:43,460 --> 00:10:46,570
+Now Dog overwrote that and now it's going to print.
+
+145
+00:10:46,640 --> 00:10:48,920
+I am a dog.
+
+146
+00:10:48,920 --> 00:10:54,230
+So when I run this python in my example it's going to say dog created right above it.
+
+147
+00:10:54,290 --> 00:10:55,200
+Animal created.
+
+148
+00:10:55,400 --> 00:10:58,050
+That comes from this line and it Methot off animal.
+
+149
+00:10:58,130 --> 00:11:03,860
+Then it says Dog created that comes from this line print dog created and then when you call dog eats
+
+150
+00:11:04,370 --> 00:11:07,660
+that's actually calling the inheritance method here eating.
+
+151
+00:11:07,760 --> 00:11:11,990
+And then when you call I am a dog off report.
+
+152
+00:11:12,130 --> 00:11:13,890
+That's this report Prince.
+
+153
+00:11:13,920 --> 00:11:14,610
+I am a dog.
+
+154
+00:11:14,610 --> 00:11:19,860
+You were able to successfully overwrite this old report method that you inherited from and that's the
+
+155
+00:11:19,860 --> 00:11:25,820
+basic idea behind inheritance being able to use old methods from another class to find.
+
+156
+00:11:25,920 --> 00:11:29,840
+And then if you ever want to you can always overwrite those methods yourself.
+
+157
+00:11:29,850 --> 00:11:37,070
+Now something I'm often asked is What do you do if your animal init method actually took attributes.
+
+158
+00:11:37,350 --> 00:11:44,300
+So for example let's say the animals had a fur attribute so so me delete this print statement and say
+
+159
+00:11:44,840 --> 00:11:50,890
+self-taught for is equal to the fur provided in this case.
+
+160
+00:11:50,910 --> 00:11:57,240
+If I were to try to run this I would get back an error it would say hey this is missing one required
+
+161
+00:11:57,240 --> 00:12:02,230
+positional argument for and that's coming from this animal in itself line.
+
+162
+00:12:02,280 --> 00:12:09,050
+So right here it's saying hey animals you're required to say what kind of fur this animal has.
+
+163
+00:12:09,180 --> 00:12:13,650
+And when you created in the heritage from the instance of the class down here when you're saying D is
+
+164
+00:12:13,650 --> 00:12:14,430
+equal to dog.
+
+165
+00:12:14,640 --> 00:12:16,880
+You forgot to provide what fur.
+
+166
+00:12:17,040 --> 00:12:18,090
+Well that's no problem.
+
+167
+00:12:18,090 --> 00:12:26,490
+All you need to do is then accept a parameter for the init method of your dog class and then stick that
+
+168
+00:12:26,490 --> 00:12:31,410
+for parameter into the method of the animal call.
+
+169
+00:12:31,990 --> 00:12:37,530
+And I want to save this if I just read this right now still get an error because it saying hey you're
+
+170
+00:12:37,530 --> 00:12:42,030
+forgetting to provide for so on it to do inside the class is provided for.
+
+171
+00:12:42,030 --> 00:12:48,450
+So maybe I'll say this dog has fuzzy for an hour when you run it you don't get an error it just says
+
+172
+00:12:48,450 --> 00:12:50,360
+Dog created eating and I am a dog.
+
+173
+00:12:50,580 --> 00:12:59,010
+And if we delete all these I can always say d dot for and I can print out type notice again that first
+
+174
+00:12:59,010 --> 00:13:00,500
+an attribute in this case.
+
+175
+00:13:00,500 --> 00:13:07,790
+So I run this and you get back dog created fuzzy and notice it's no longer printing animal created because
+
+176
+00:13:07,790 --> 00:13:08,220
+I don't know.
+
+177
+00:13:08,240 --> 00:13:11,480
+No longer have that print statement there in the animal.
+
+178
+00:13:11,480 --> 00:13:17,990
+So instead I'm saying in it except for assigns that for and if I ever need to do that with my inherited
+
+179
+00:13:17,990 --> 00:13:24,020
+class I can just pasan in its own init method and then pass that into the inherited class method.
+
+180
+00:13:24,480 --> 00:13:24,950
+OK.
+
+181
+00:13:25,160 --> 00:13:27,790
+That's the very basics of methods and inheritance.
+
+182
+00:13:27,950 --> 00:13:33,290
+Remember methods are essentially functions defined inside the body of a class and they're used to perform
+
+183
+00:13:33,350 --> 00:13:40,360
+operations with the attributes of our objects inheritance is a way to form new classes using classes
+
+184
+00:13:40,360 --> 00:13:45,760
+that have already been defined and those newly formed classes are called derived classes and the classes
+
+185
+00:13:45,760 --> 00:13:48,130
+that we derive from are called base classes.
+
+186
+00:13:48,130 --> 00:13:53,950
+So in this case animals the base class in dogs the derived class if you have any questions feel free
+
+187
+00:13:53,950 --> 00:13:55,410
+to post to Cunanan forums.
+
+188
+00:13:55,420 --> 00:14:00,670
+We have one lecturer left in this O.P. series which is just special methods essentially methods that
+
+189
+00:14:00,670 --> 00:14:03,720
+allow us to interact with built in Python functions.
+
+190
+00:14:03,790 --> 00:14:04,420
+We'll see if they're.

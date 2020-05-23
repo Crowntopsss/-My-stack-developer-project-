@@ -1,0 +1,47 @@
+1
+00:00:05,400 --> 00:00:10,870
+Witajcie wszystkich na pewnym poziomie 2 poziomu kursu na pewnym poziomie.
+
+2
+00:00:10,890 --> 00:00:15,350
+Omówimy bardziej zaawansowane tematy, takie jak programowanie obiektowe w oparciu o zakres.
+
+3
+00:00:15,390 --> 00:00:18,150
+Będziemy mieli szybki projekt, by przetestować twoje O. P. umiejętności.
+
+4
+00:00:18,360 --> 00:00:19,820
+Potem porozmawiamy o dekoratorze.
+
+5
+00:00:19,890 --> 00:00:24,840
+Porozmawiamy o tym, że ta nazwa jest najistotniejsza, która pojawia się w wielu skryptach Pi, a następnie
+
+6
+00:00:24,840 --> 00:00:26,980
+porozmawiamy o tym, jak tworzyć własne moduły.
+
+7
+00:00:27,030 --> 00:00:32,130
+Zakładam, że tak naprawdę wielu ludzi prawdopodobnie ma jakieś doświadczenie z Pythonem i może
+
+8
+00:00:32,190 --> 00:00:34,800
+po prostu przeskoczyć bezpośrednio na poziom Pythona.
+
+9
+00:00:34,870 --> 00:00:39,240
+Chcę tylko wyjaśnić, że skoro przechodzisz od razu do poziomu drugiego Pythona, powinieneś
+
+10
+00:00:39,240 --> 00:00:43,700
+już wiedzieć, jak funkcje i podstawowe typy danych oraz struktury danych działają z Pythonem.
+
+11
+00:00:43,920 --> 00:00:48,770
+Więc jeśli nie czujesz się komfortowo, możesz jeszcze wrócić i przejrzeć poziom Pythona.
+
+12
+00:00:49,030 --> 00:00:53,430
+OK, ale biorąc to pod uwagę, zacznijmy i zacznijmy uczyć się o tych zaawansowanych tematach.

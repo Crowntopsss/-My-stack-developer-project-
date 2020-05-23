@@ -1,0 +1,759 @@
+1
+00:00:05,380 --> 00:00:08,520
+Witamy ponownie w drugiej części naszej dyskusji na temat programowania obiektowego.
+
+2
+00:00:08,620 --> 00:00:11,080
+Cóż, porozmawiamy o metodach i dziedziczeniu.
+
+3
+00:00:11,080 --> 00:00:13,820
+Wróćmy do edytora tekstów, w którym poprzednio zakończyliśmy.
+
+4
+00:00:14,020 --> 00:00:18,310
+Ostatnim razem przerwał nam tworzenie tej klasy psów, która miała tylko atrybuty.
+
+5
+00:00:18,310 --> 00:00:22,990
+Omówiliśmy także atrybuty obiektów klasowych, które są atrybutami, które będą prawdziwe
+
+6
+00:00:22,990 --> 00:00:24,950
+dla dowolnego wystąpienia obiektu podstawowego.
+
+7
+00:00:24,970 --> 00:00:29,410
+Nie ma więc znaczenia, jaki rodzaj rasy lub nazwy może mieć stado, a także nie ma znaczenia,
+
+8
+00:00:29,410 --> 00:00:30,390
+czy stworzymy nowego psa.
+
+9
+00:00:30,520 --> 00:00:35,050
+Mogę więc stworzyć zmienną o nazwie nowy pies, która jest również instancją klasy psów.
+
+10
+00:00:35,080 --> 00:00:41,900
+Ten może być golden retriever, więc mówią, że Golden jest rasy i nazwa będzie po prostu mieć tego psa.
+
+11
+00:00:41,920 --> 00:00:52,550
+Cindy, a jeśli powiem "Prince", nowy gatunek psa, to uratuję też ssaka.
+
+12
+00:00:52,590 --> 00:00:53,730
+Więc dostaję ssaka ssaka.
+
+13
+00:00:53,770 --> 00:00:58,350
+Nie ma znaczenia, co to jest nazwa rasy lub nazwa psa, to atrybut obiektu klasy będzie taki
+
+14
+00:00:58,350 --> 00:00:59,860
+sam dla wszystkich z nich.
+
+15
+00:00:59,910 --> 00:01:05,760
+Porozmawiajmy teraz o metodach, które zasadniczo będą działaniami wykonywanymi na obiekcie.
+
+16
+00:01:06,090 --> 00:01:10,290
+Tak więc usunę cały ten kod i zacznijmy od czegoś nowego.
+
+17
+00:01:10,290 --> 00:01:15,620
+Zamierzamy stworzyć klasę koła, a my powiemy DMF.
+
+18
+00:01:15,630 --> 00:01:17,150
+Pozwól mi przybliżyć tylko trochę.
+
+19
+00:01:18,800 --> 00:01:21,700
+Powiemy T. FA. i tworzymy własną metodę.
+
+20
+00:01:21,710 --> 00:01:28,780
+Pamiętaj, że jest to podwójne podkreślenie, więc podkreślenie podkreślenia, a my powiemy siebie i w tym przypadku będziemy definiować
+
+21
+00:01:28,780 --> 00:01:34,100
+atrybut jako promień, a my możemy również podać wartość domyślną, tak jak możemy dla
+
+22
+00:01:34,100 --> 00:01:35,000
+normalnej funkcji.
+
+23
+00:01:35,000 --> 00:01:41,540
+Domyślam się, że domyślnie jest to wartość radialna równa 1, na wypadek gdyby użytkownik tego nie
+
+24
+00:01:41,540 --> 00:01:45,790
+podał, wtedy powiemy, że promień myślowy jest równy promieniowi OK.
+
+25
+00:01:46,070 --> 00:01:47,390
+Więc mamy kółko zajęć.
+
+26
+00:01:47,400 --> 00:01:52,850
+W tej metodzie podczas tworzenia nowej instancji klasy kół możesz podać jej promień.
+
+27
+00:01:52,850 --> 00:01:57,650
+Jeśli nie podasz promienia, domyślnie będzie to promień równy 1.
+
+28
+00:01:57,710 --> 00:02:03,810
+Stwórzmy więc instancję z napisem "Mój krąg" jest równy w swoim kręgu.
+
+29
+00:02:04,360 --> 00:02:08,350
+A potem wydrukuję, jak moje promienie się kręcą.
+
+30
+00:02:08,900 --> 00:02:10,410
+Uruchommy to.
+
+31
+00:02:10,550 --> 00:02:16,800
+A teraz wracam 1 jako promień, który jednak mogę podać w moim własnym promieniu, takim jak 10.
+
+32
+00:02:17,030 --> 00:02:18,080
+I kiedy znów to uruchomię.
+
+33
+00:02:18,300 --> 00:02:23,030
+Teraz wracam 10, więc mam ten domyślny promień, który zawsze możesz zastąpić, gdy
+
+34
+00:02:23,030 --> 00:02:25,090
+tworzę nową instancję mojego kręgu.
+
+35
+00:02:25,100 --> 00:02:29,210
+Teraz pomyśl o atrybucie obiektu klasy, który będzie prawdziwy dla dowolnego koła.
+
+36
+00:02:29,690 --> 00:02:31,190
+Jednym z nich może być pi.
+
+37
+00:02:31,580 --> 00:02:37,460
+Zatem wartość pi lub ten stosunek 3. 1, ponieważ będzie to prawie prawdziwe dla dowolnego okręgu,
+
+38
+00:02:37,460 --> 00:02:38,310
+niezależnie od promienia.
+
+39
+00:02:38,330 --> 00:02:44,460
+Więc może ustawić to jako atrybut obiektu klasy przez drugi dom pod tą metodą init.
+
+40
+00:02:45,970 --> 00:02:49,310
+Do tej pory omawialiśmy tylko atrybuty omawiające metody.
+
+41
+00:02:49,450 --> 00:02:53,170
+Tak więc ta metoda init jest technicznie znana jako specjalna metoda.
+
+42
+00:02:53,170 --> 00:02:55,550
+Ponownie ma ten podwójny zestaw podkreśleń, aby ci to pokazać.
+
+43
+00:02:55,710 --> 00:03:01,660
+Ale możesz tworzyć własne metody, które wykonują jakąś akcję z lub na obiekcie.
+
+44
+00:03:01,720 --> 00:03:09,410
+Stwórzmy więc metodę obliczania powierzchni i domyślnie każda metoda powinna zaczynać się od self.
+
+45
+00:03:09,480 --> 00:03:14,970
+Zasadniczo mówi to Pythonowi, że odwołujesz się do instancji obiektu tworzonego podczas
+
+46
+00:03:15,030 --> 00:03:16,760
+stosowania tej konkretnej metody.
+
+47
+00:03:16,920 --> 00:03:23,520
+Tak więc obszar zwróci tylko obszar koła, który w tym przypadku jest pio r kwadratowy.
+
+48
+00:03:23,520 --> 00:03:32,310
+Powiemy więc, że czasy samouka są takie same, a czasy samouka są czasem samoukiem pi.
+
+49
+00:03:32,950 --> 00:03:41,450
+Więc to uratowało i powiem mój promień okręgu, a następnie wydrukujemy obszar kół.
+
+50
+00:03:41,660 --> 00:03:43,090
+Ale zauważ, co się dzieje.
+
+51
+00:03:43,130 --> 00:03:49,190
+Sam obszar to metoda, która oznacza, że ​​gdybym tylko nazwał ten obszar, to faktycznie nie
+
+52
+00:03:49,190 --> 00:03:50,270
+wykona tej metody.
+
+53
+00:03:50,420 --> 00:03:51,670
+Promień samouka.
+
+54
+00:03:51,680 --> 00:03:52,790
+To jest atrybut.
+
+55
+00:03:52,970 --> 00:03:56,370
+Ale ten obszar DPF będzie metodą, którą możesz powiedzieć.
+
+56
+00:03:56,390 --> 00:04:00,410
+Jest to metoda, ponieważ ma przed sobą filtr DPF bardzo podobny do funkcji.
+
+57
+00:04:00,770 --> 00:04:02,740
+Powiedzmy to, uruchom i zobaczmy, co się stanie.
+
+58
+00:04:04,000 --> 00:04:06,340
+Teraz otrzymuję 10 za promień.
+
+59
+00:04:06,340 --> 00:04:12,580
+Ale kiedy nazywam swój krąg obszarem, w którym znajduję się ten obwód Methot Circle obiektu głównego koła w
+
+60
+00:04:12,580 --> 00:04:18,250
+tej pamięci lokalizacji i bardzo podobny do tego, nad czym pracujemy nad funkcjami, aby wykonać metodę.
+
+61
+00:04:18,250 --> 00:04:23,240
+Musisz mieć otwartych i bliskich książąt, a potem widać, że kolorowanie składni się zmieniło.
+
+62
+00:04:23,290 --> 00:04:30,820
+Teraz, kiedy to uruchomię, jestem w stanie zobaczyć rzeczywisty obszar koła trzy czternaście punktów zero, więc są
+
+63
+00:04:30,970 --> 00:04:32,350
+kwadraty razy pi.
+
+64
+00:04:32,470 --> 00:04:33,130
+OK.
+
+65
+00:04:33,160 --> 00:04:39,460
+Tak więc metoda będzie wykonywała działanie i może powrócić lub może faktycznie wpłynąć na
+
+66
+00:04:39,460 --> 00:04:41,680
+sam obiekt bez zwracania czegokolwiek.
+
+67
+00:04:41,680 --> 00:04:44,290
+Miej to na uwadze, by móc z niej skorzystać w przyszłości.
+
+68
+00:04:45,270 --> 00:04:52,880
+Spróbujmy dodać nową metodę, która oblicza obwód koła, powiedzmy, że F
+
+69
+00:04:53,370 --> 00:04:54,940
+powie "obwód".
+
+70
+00:04:55,320 --> 00:05:03,840
+Mijamy i siebie, a następnie powiemy, że powrót i obwód koła to 2 razy pi.
+
+71
+00:05:03,850 --> 00:05:09,640
+Więc powiemy, że samouk pi razy promień, który w tym przypadku jest samoukiem.
+
+72
+00:05:09,640 --> 00:05:14,390
+Zauważ tutaj, jak mówię samoukiem zamiast promienia.
+
+73
+00:05:14,410 --> 00:05:18,840
+Jeśli powiem tylko promień Pi nie rozumie, o co mi chodzi.
+
+74
+00:05:18,910 --> 00:05:19,720
+Muszę to powiedzieć.
+
+75
+00:05:19,720 --> 00:05:24,660
+Hej, mówię o promieniu samouka o promieniu koła, które zostało mu przypisane, gdy
+
+76
+00:05:24,660 --> 00:05:25,760
+utworzysz w kręgu.
+
+77
+00:05:26,280 --> 00:05:28,400
+A więc promień samouka.
+
+78
+00:05:28,720 --> 00:05:32,190
+Uruchommy to i whoops my faktycznie zapomnieliśmy wykonać to.
+
+79
+00:05:32,200 --> 00:05:38,620
+Wróćmy więc tutaj i powiedz, że mój obwód koła znowu pamięta te otwarte Princie, dzięki
+
+80
+00:05:38,620 --> 00:05:40,680
+czemu możemy uruchomić tę metodę.
+
+81
+00:05:40,720 --> 00:05:46,300
+Uruchomiłem to i widzę, że obwód koła z pewną dodatkową precyzją z
+
+82
+00:05:46,300 --> 00:05:48,770
+powodu używania liczb zmiennoprzecinkowych wygląda OK.
+
+83
+00:05:49,050 --> 00:05:53,470
+Tak więc byliśmy w stanie stworzyć własne metody dla obszaru i obwodu.
+
+84
+00:05:53,490 --> 00:05:56,130
+Następną rzeczą, o której chcę mówić, jest dziedziczenie.
+
+85
+00:05:56,460 --> 00:05:58,800
+Więc zamierzam wyczyścić te przykłady.
+
+86
+00:06:01,200 --> 00:06:09,800
+I stwórzmy klasę o nazwie zwierzę, która będzie bardzo prostą klasą, która będzie miała w sobie
+
+87
+00:06:09,810 --> 00:06:10,470
+metodę.
+
+88
+00:06:12,020 --> 00:06:14,700
+Z samym sobą nie będzie żadnych innych parametrów.
+
+89
+00:06:14,960 --> 00:06:17,440
+W tym przypadku nie będziemy nawet przypisywać żadnych atrybutów.
+
+90
+00:06:17,440 --> 00:06:28,690
+Po prostu powiemy, że stworzono zwierzę, a potem powiemy T. FA. zgłoś się, a to
+
+91
+00:06:29,380 --> 00:06:44,200
+będzie metoda, która po prostu wypisuje zwierzę, a potem stworzymy jeszcze jedną metodę, która wypisze jedzenie.
+
+92
+00:06:44,240 --> 00:06:46,220
+OK, więc bawmy się z tym.
+
+93
+00:06:46,220 --> 00:06:49,780
+Zamierzam stworzyć instancję mojego zwierzęcego obiektu.
+
+94
+00:06:49,820 --> 00:06:58,040
+Powiedzmy, że a jest równy obiektowi zwierzęcemu, a następnie powiemy kropkę i zróbmy
+
+95
+00:06:58,040 --> 00:07:00,320
+to i zróbmy raport.
+
+96
+00:07:00,320 --> 00:07:05,630
+Dźwięk powiadomienia po wydrukowaniu połączenia na raporcie eata, ponieważ te metody już są dla
+
+97
+00:07:06,770 --> 00:07:11,930
+mnie wydrukowane i zamierzam trochę pomniejszyć, abyśmy mogli zobaczyć całą klasę na ekranie.
+
+98
+00:07:11,930 --> 00:07:13,190
+Więc uruchommy to.
+
+99
+00:07:13,430 --> 00:07:14,820
+I zauważ, że wracam.
+
+100
+00:07:15,020 --> 00:07:17,060
+Jedzenie zwierzęcia.
+
+101
+00:07:17,360 --> 00:07:17,850
+OK.
+
+102
+00:07:18,050 --> 00:07:20,450
+Tak bardzo podstawowa klasa tutaj.
+
+103
+00:07:20,550 --> 00:07:25,040
+Znowu będzie to drukowanie zwierząt stworzonych po stworzeniu stworzonego zwierzęcia lub zwierzęcia, które dzieje się
+
+104
+00:07:25,040 --> 00:07:25,930
+w linii 12.
+
+105
+00:07:26,030 --> 00:07:29,190
+Potem mówi o jedzeniu i że to zwierzę.
+
+106
+00:07:29,200 --> 00:07:38,370
+Teraz może chcesz stworzyć nową klasę, taką jak klasa psów i zaczniesz myśleć samemu Hej, robiłem już całą tę pracę
+
+107
+00:07:38,370 --> 00:07:42,220
+z klasą zwierząt, może mógłbym zmniejszyć niektóre z tego.
+
+108
+00:07:42,240 --> 00:07:47,550
+Na przykład chciałbym, aby psy miały metodę jedzenia i mówienia, że ​​jedzą.
+
+109
+00:07:47,610 --> 00:07:53,100
+Jak więc w rzeczywistości skorzystać z całej wcześniejszej pracy, którą zrobiłem
+
+110
+00:07:53,250 --> 00:07:59,540
+na klasie zwierząt z moją klasą psów, którą możesz zrobić, możesz odziedziczyć klasę
+
+111
+00:07:59,540 --> 00:08:07,110
+zwierząt, a sposób, w jaki to robisz, to po prostu przekazać zwierzęciu żadnych książąt Daleko jako
+
+112
+00:08:07,620 --> 00:08:22,920
+koniec zwierzęcia do klasy psów, a następnie wewnątrz tej klasy, którą powiesz w swoim własnym ja, a tu możesz powiedzieć, że stworzony został książę-pies, z wyjątkiem tego, a teraz tutaj, co zamierzam
+
+113
+00:08:22,920 --> 00:08:28,070
+zrobić, to ja zamierzam stworzyć instancję klasy, więc powiem D.
+
+114
+00:08:28,350 --> 00:08:33,190
+Jest równy psu.
+
+115
+00:08:33,330 --> 00:08:39,570
+Ale to, co mam zamiar zrobić, to w tej metodzie dla psa mam
+
+116
+00:08:39,600 --> 00:08:49,750
+zamiar zainicjować zwierzęcą metodę, którą odziedziczyłem spod znaku podkreślenia kropki Saussy, podkreślenie podkreślenia, a potem passen, więc to, co to
+
+117
+00:08:50,660 --> 00:08:57,080
+mówi, to stworzenie instancji psa I zamierzam wykorzystać moje dziedzictwo ze zwierzęcia, stworzyć
+
+118
+00:08:57,440 --> 00:09:01,410
+instancję klasy Animal, a następnie wydrukować, które stworzyłem.
+
+119
+00:09:01,460 --> 00:09:06,840
+Kiedy więc utworzę tutaj psa, powinienem zobaczyć zwierzę stworzone, ponieważ wzywam tutaj zwierzę.
+
+120
+00:09:06,890 --> 00:09:08,700
+A potem powinienem zobaczyć psa stworzonego.
+
+121
+00:09:08,720 --> 00:09:10,100
+Zobaczmy, czy tak się stanie.
+
+122
+00:09:11,790 --> 00:09:15,810
+Więc przewijam w górę i tam mamy to stworzone zwierzę i pies stworzony.
+
+123
+00:09:15,810 --> 00:09:21,820
+Teraz powstaje pytanie, jakie są inne przydatne metody w raporcie na temat zwierząt i jedzeniu.
+
+124
+00:09:22,200 --> 00:09:25,620
+Zobaczmy, czy teraz mam do nich dostęp z klasy psów.
+
+125
+00:09:25,910 --> 00:09:27,510
+Więc powiem D.
+
+126
+00:09:27,570 --> 00:09:29,100
+Zjedz zawiadomienie tutaj.
+
+127
+00:09:29,160 --> 00:09:32,510
+Nigdy nie zdefiniowałem jedzenia w mojej klasie myśli.
+
+128
+00:09:32,580 --> 00:09:36,250
+To tylko wnętrze klasy Animal.
+
+129
+00:09:36,350 --> 00:09:42,710
+Mam zamiar to uruchomić i wracam do jedzenia, mimo że nigdy nie zdefiniowałem go ściśle w klasie
+
+130
+00:09:42,710 --> 00:09:43,270
+psów.
+
+131
+00:09:43,290 --> 00:09:51,060
+Byłem w stanie odziedziczyć tę metodę jedzenia z klasy Zwierząt i to jest to, co dziedziczenie wszystko na
+
+132
+00:09:51,240 --> 00:09:58,200
+temat możliwości korzystania z metod lub atrybutów, które już zdefiniowałeś w innej klasie z nową klasą.
+
+133
+00:09:58,200 --> 00:10:01,640
+Teraz mam dostęp do jedzenia i powinienem mieć dostęp do raportu.
+
+134
+00:10:01,980 --> 00:10:10,990
+Tak więc raport Saidy to poprowadził, a teraz widzę, jak pies tworzył jedzenie zwierzęcia.
+
+135
+00:10:11,230 --> 00:10:13,100
+Pomyślmy jednak o tym.
+
+136
+00:10:13,120 --> 00:10:16,060
+Może chcę być bardziej konkretny w moim raporcie, niż tylko zwierzę.
+
+137
+00:10:16,090 --> 00:10:18,340
+Może chcieliby, żeby zgłosiła psa.
+
+138
+00:10:18,610 --> 00:10:20,080
+Cóż, to nie problem.
+
+139
+00:10:20,080 --> 00:10:22,730
+Możemy łatwo nadpisać odziedziczone metody.
+
+140
+00:10:22,870 --> 00:10:29,810
+Wszystko, co muszę powiedzieć to to, że Ziemia wybiera ten sam raport o nazwie metody, powiedzmy "siebie".
+
+141
+00:10:29,810 --> 00:10:31,540
+A potem to wydrukuje.
+
+142
+00:10:32,120 --> 00:10:41,180
+Jestem psem, więc teraz, kiedy dzwonisz do raportu, mimo że odziedziczysz po zwierzętach i zwierzętach, zwykle drukujesz
+
+143
+00:10:41,180 --> 00:10:43,350
+zwierzę w celu zgłoszenia.
+
+144
+00:10:43,460 --> 00:10:46,570
+Teraz Dog nadpisał to, a teraz będzie drukować.
+
+145
+00:10:46,640 --> 00:10:48,920
+Jestem psem.
+
+146
+00:10:48,920 --> 00:10:54,230
+Więc kiedy uruchomię tego Pythona w moim przykładzie, powie to, że pies został stworzony tuż nad nim.
+
+147
+00:10:54,290 --> 00:10:55,200
+Zwierzę stworzone.
+
+148
+00:10:55,400 --> 00:10:58,050
+To pochodzi z tej linii, a to Methot od zwierzęcia.
+
+149
+00:10:58,130 --> 00:11:03,860
+Następnie napisano, że pies został stworzony z tego stworzonego przez psa linii, a następnie, gdy nazywasz psa
+
+150
+00:11:04,370 --> 00:11:07,660
+jedzeniem, to tak naprawdę nazywa się tutaj metodą dziedziczenia.
+
+151
+00:11:07,760 --> 00:11:11,990
+A potem, kiedy dzwonisz, jestem raportem o psie.
+
+152
+00:11:12,130 --> 00:11:13,890
+To jest ten raport, Prince.
+
+153
+00:11:13,920 --> 00:11:14,610
+Jestem psem.
+
+154
+00:11:14,610 --> 00:11:19,860
+Udało ci się z powodzeniem zastąpić tę starą metodę raportu, od której odziedziczyłeś, i
+
+155
+00:11:19,860 --> 00:11:25,820
+to jest podstawowa idea, dzięki której dziedziczenie może korzystać ze starych metod z innej klasy.
+
+156
+00:11:25,920 --> 00:11:29,840
+A jeśli kiedykolwiek zechcesz, zawsze możesz zastąpić te metody samodzielnie.
+
+157
+00:11:29,850 --> 00:11:37,070
+Teraz coś, o co często pytam, brzmi: Co robisz, jeśli twoja metoda inicjacji zwierząt faktycznie przyjęła atrybuty.
+
+158
+00:11:37,350 --> 00:11:44,300
+Powiedzmy na przykład, że zwierzęta miały atrybut futra, więc usunęłam to oświadczenie
+
+159
+00:11:44,840 --> 00:11:50,890
+i powiedziałem, że samouk jest równy futrze w tym przypadku.
+
+160
+00:11:50,910 --> 00:11:57,240
+Gdybym próbował to uruchomić, zwróciłbym błąd, który oznaczałby, że brakuje jednego wymaganego argumentu
+
+161
+00:11:57,240 --> 00:12:02,230
+pozycyjnego, a to pochodzi od tego zwierzęcia w linii prostej.
+
+162
+00:12:02,280 --> 00:12:09,050
+Więc tutaj jest powiedzenie hej zwierząt, że musisz powiedzieć, jakie futro ma to zwierzę.
+
+163
+00:12:09,180 --> 00:12:13,650
+A kiedy stworzyłeś dziedzictwo z instancji klasy tutaj, kiedy mówisz, że D jest
+
+164
+00:12:13,650 --> 00:12:14,430
+równe psu.
+
+165
+00:12:14,640 --> 00:12:16,880
+Zapomniałeś podać jakie futro.
+
+166
+00:12:17,040 --> 00:12:18,090
+Cóż, to nie problem.
+
+167
+00:12:18,090 --> 00:12:26,490
+Wszystko, co musisz zrobić, to zaakceptować parametr dla metody init twojej klasy psów, a następnie
+
+168
+00:12:26,490 --> 00:12:31,410
+trzymać ją dla parametru w metodzie wywołania zwierzęcia.
+
+169
+00:12:31,990 --> 00:12:37,530
+I chcę to zapisać, jeśli tylko przeczytam to teraz, nadal otrzymuję błąd, ponieważ mówi, że
+
+170
+00:12:37,530 --> 00:12:42,030
+hej, zapominając o zapewnieniu tak, aby to zrobić w klasie, jest przewidziane.
+
+171
+00:12:42,030 --> 00:12:48,450
+Więc może powiem, że ten pies ma rozmyte przez godzinę, kiedy go uruchomisz, nie dostaniesz błędu, tylko mówi, że pies
+
+172
+00:12:48,450 --> 00:12:50,360
+stworzył jedzenie, a ja jestem psem.
+
+173
+00:12:50,580 --> 00:12:59,010
+A jeśli usuniemy wszystkie te elementy, zawsze mogę powiedzieć "D kropka" i mogę wydrukować ogłoszenie typu ponownie, że najpierw atrybut
+
+174
+00:12:59,010 --> 00:13:00,500
+w tym przypadku.
+
+175
+00:13:00,500 --> 00:13:07,790
+Więc biegnę to, a ty odzyskasz psa, który jest nieostry i zauważyłeś, że nie jest to już drukowanie stworzonego zwierzęcia, ponieważ nie
+
+176
+00:13:07,790 --> 00:13:08,220
+wiem.
+
+177
+00:13:08,240 --> 00:13:11,480
+Nie ma już tam tego oświadczenia o druku u zwierzęcia.
+
+178
+00:13:11,480 --> 00:13:17,990
+Więc zamiast tego mówię w nim, z wyjątkiem przypisania, że ​​dla i jeśli kiedykolwiek będę musiał to zrobić z moją
+
+179
+00:13:17,990 --> 00:13:24,020
+odziedziczoną klasą, mogę po prostu pasanować w swojej własnej metodzie init, a następnie przekazać to do odziedziczonej metody klasy.
+
+180
+00:13:24,480 --> 00:13:24,950
+OK.
+
+181
+00:13:25,160 --> 00:13:27,790
+To są podstawy metod i dziedziczenia.
+
+182
+00:13:27,950 --> 00:13:33,290
+Pamiętaj, że metody są zasadniczo funkcjami zdefiniowanymi w ciele klasy i są używane do
+
+183
+00:13:33,350 --> 00:13:40,360
+wykonywania operacji z atrybutami naszych obiektów dziedziczenie jest sposobem tworzenia nowych klas przy użyciu klas, które zostały już
+
+184
+00:13:40,360 --> 00:13:45,760
+zdefiniowane i te nowo utworzone klasy nazywane są klasami pochodnymi a klasy, z których
+
+185
+00:13:45,760 --> 00:13:48,130
+się wywodzimy, nazywane są klasami podstawowymi.
+
+186
+00:13:48,130 --> 00:13:53,950
+Tak więc w tym przypadku zwierzęta klasy bazowej u psów klasy pochodnej, jeśli masz jakieś pytania, możesz wysyłać
+
+187
+00:13:53,950 --> 00:13:55,410
+posty na forach Cunanan.
+
+188
+00:13:55,420 --> 00:14:00,670
+Mamy jednego wykładowcę w tym O. P. seria, która jest tylko specjalnymi metodami,
+
+189
+00:14:00,670 --> 00:14:03,720
+zasadniczo metodami, które pozwalają nam na interakcję z wbudowanymi funkcjami Pythona.
+
+190
+00:14:03,790 --> 00:14:04,420
+Zobaczymy, czy są.
