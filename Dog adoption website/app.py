@@ -41,6 +41,44 @@ def index():
 def add_pup():
      form = AddForm()
 
+     if form.validate_on_submit():
+
+         name = form.name.data
+
+         new_pup = Puppy(name)
+         db.session.add(new_pup)
+         db.session.commit()
+
+         return redirect(url_for('list_pup'))
+    
+    return render_template('ass,html',form= form)
+
+@app.route('/list')
+def list_pup():
+
+    puppies = Puppy.query.all()
+    return render_template('list.html',puppies=puppies)
+
+@app.route('/delete', methods=['GET','POST'])
+def del_pup():
+
+    form = DelForm()
+
+    if form.validate_on_submit():
+
+        id = form.id.data
+        pup = Puppy.query.get(id)
+        db.session.delet(pup)
+        db.session.commit()
+
+        return redirect(url_for('list_pup'))
+    return render_template('delete.html', form=form)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
+
 
 
 
