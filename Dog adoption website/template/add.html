@@ -3,6 +3,11 @@
 <div class="jumbotron">
     <h1>Have a puppy that needs to br adopted</h1>
     <p>Add a new ppuppy to our database</p>
-    <form class="" action="index.html" methods="post"></form>
+    <form methods="post">
+        {{form.hidden_tag()}}
+        {{form.name.label}}{{form.name}}
+        {{form.submit()}}
+
+    </form>
 </div>
 {% endblock %}
