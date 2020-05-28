@@ -24,13 +24,23 @@ class Puppy(db.models):
 
     __tablename__ = 'puppies'
     id = db.Column(db.Integer, primary_key = True)
-    name =db.Column(db.text)
+    name = db.Column(db.text)
+    owner = db.relationship('Owner', backref='puppy', uselist=False)
 
-    def __init__(self,name):
+    def __init__(self,name): 
         self.name = name
 
     def __repr__(self):
         return f"Puppy name: {self.name}"
+
+class Owner(db.Models):
+
+    __tablename__ = 'owners'
+
+    id = db.Column(db.Integer,primary_key=True)
+    name = db.Column(db.Text)
+
+    
 
 ### view function ###
 @app.route('/')
