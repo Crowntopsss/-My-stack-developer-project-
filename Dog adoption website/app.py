@@ -71,6 +71,9 @@ def add_owner():
         db.session.add(new_owner)
         db.session.commit()
 
+        return redirect(url_for('list_pup'))
+    return render_template('add_owner.html', form=form)
+
 @app.route('/add', methods=['GET','POST'])
 def add_pup():
      form = AddForm()
