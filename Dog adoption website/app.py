@@ -1,6 +1,6 @@
 import os
 
-from froms import AddForm, DelForm
+from froms import AddForm, DelForm, AddOwnerForm
 from flask import Flask, render_template, url_for, redirect
 from flask_sqlalchemy import SQLAlchemy 
 from flask_migrate import Migrate
@@ -39,13 +39,37 @@ class Owner(db.Models):
 
     id = db.Column(db.Integer,primary_key=True)
     name = db.Column(db.Text)
+    puppy_id = db.Column(db.Intger, db.ForeignKey("pupppies.id"))
 
-    
+    def __init__(self,name):
+        self.name = name
+
+    def __repr__(self):
+        if self.owner:
+            return f"Puppy name is {self.name} and owner is {self.owner.namr}"
+
+        else:
+            return f'Puppy name: {self.name} and no owner assigned yet!'
+
+
+
 
 ### view function ###
 @app.route('/')
 def index():
     return render_template('home')
+
+@app.route('/add_owner', methods=['GET','POST'])
+def add_owner():
+    form = AddOwnerForm()
+
+    if form.validate_on_submit():
+        name = form.name.data
+        pup_id = form.pup_id.data
+
+        new_owner = Owner(name,pup_id)
+        db.session.add(new_owner)
+        db.session.commit()
 
 @app.route('/add', methods=['GET','POST'])
 def add_pup():
